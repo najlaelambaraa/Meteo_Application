@@ -1,16 +1,18 @@
 import React from 'react';
-import { View, Text ,StyleSheet } from 'react-native';
-
+import { View, FlatList, Image, Text, StyleSheet } from 'react-native';
+import CityListItem from '../Components/CityList';
+import MyList from '../Components/MyList';
+import { City } from '../data/stub';
 
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <View >
       <View style={styles.centered}>
-        <Text style={styles.title}>Mon super Home!</Text>
-      </View>
-      <Text>Mon super texte ...</Text>
       
+      </View>
+      <Text>Search Bar !!!!!</Text>
+      <MyList/>
     </View>
   )
 };
@@ -18,7 +20,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "darksalmon",
+    
   },
   centered: {
     alignItems: "center"
