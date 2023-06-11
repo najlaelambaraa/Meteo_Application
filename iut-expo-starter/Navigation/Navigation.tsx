@@ -19,7 +19,7 @@ export default function Navigation() {
                <BottomTabNavigator.Screen name="Favoris" component={FavorisScreen}
                            options={{
                                title: 'Favoris',
-                               tabBarIcon: ({color}) => <TabBarIcon name="star" color={color}/>,
+                               tabBarIcon: ({color}) => <TabBarIcon name="heart" color="red"/>,
                            }}/>
             </BottomTabNavigator.Navigator>
         </NavigationContainer>
