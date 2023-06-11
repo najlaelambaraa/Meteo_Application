@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
-import { TouchableHighlight } from 'react-native-gesture-handler';
 import { CITIES_DATA, City } from '../data/stub';
 import CityListItem from './CityList';
 
