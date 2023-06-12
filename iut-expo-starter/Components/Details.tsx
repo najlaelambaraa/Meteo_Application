@@ -8,8 +8,7 @@ type CityProps = {
 };
 
 export function Details(props: CityProps) {
-  const weather: Weather = props.weather;
-  const city = City.name;
+   
 
   return (
     <View
@@ -20,32 +19,32 @@ export function Details(props: CityProps) {
         width: "100%",
       }}
     >
-      <Text style={styles.name}>{city.name}</Text>
+      <Text style={styles.name}>{props.weather.city.name}</Text>
       <View style={styles.place}>
         <Text style={styles.petitText}>
-          {city.longitude} - {city.latitude}
+          {props.weather.city.longitude} - {props.weather.city.latitude}
         </Text>
       </View>
       <TouchableHighlight>
         <Image
           style={styles.image}
           source={
-            weather?.weatherType == "Nuageux"
+            props.weather?.weatherType == "Nuageux"
               ? require("../assets/Nuageux.png")
               : require("../assets/Nuageux.png")
           }
         />
       </TouchableHighlight>
-      <Text style={styles.weatherType}>{weather?.weatherType}</Text>
+      <Text style={styles.weatherType}>{props.weather?.weatherType}</Text>
       <View style={styles.supertruc}>
         <Image
           style={styles.petitImage}
           source={require("../assets/icon.png")}
         />
         <View style={styles.supertrucencore}>
-          <Text style={styles.temperature}>{weather?.temperature}°C</Text>
+          <Text style={styles.temperature}>{props.weather?.temperature}°C</Text>
           <Text style={styles.petitTemp}>
-            Ressenti {weather?.temperatureFeelsLike}°C
+            Ressenti {props.weather?.temperatureFeelsLike}°C
           </Text>
         </View>
       </View>
@@ -58,7 +57,7 @@ export function Details(props: CityProps) {
             />
             <Text style={styles.text}>HUMIDITY</Text>
           </View>
-          <Text style={styles.humidityText}>{weather?.humidity}%</Text>
+          <Text style={styles.humidityText}>{props.weather?.humidity}%</Text>
         </View>
         <View style={styles.rightBox}>
           <View style={styles.imageEtTexte}>
@@ -68,7 +67,7 @@ export function Details(props: CityProps) {
             />
             <Text style={styles.text}>WIND SPEED</Text>
           </View>
-          <Text style={styles.humidityText}>{weather?.windSpeed} km/h</Text>
+          <Text style={styles.humidityText}>{props.weather?.windSpeed} km/h</Text>
         </View>
       </View>
       <View style={styles.boxes}>
@@ -80,7 +79,7 @@ export function Details(props: CityProps) {
             />
             <Text style={styles.text}>PRESSURE</Text>
           </View>
-          <Text style={styles.humidityText}>{weather?.pressure} hPa</Text>
+          <Text style={styles.humidityText}>{props.weather?.pressure} hPa</Text>
         </View>
         <View style={styles.rightBox}>
           <View style={styles.imageEtTexte}>
@@ -90,7 +89,7 @@ export function Details(props: CityProps) {
             />
             <Text style={styles.text}>VISIBILITY</Text>
           </View>
-          <Text style={styles.humidityText}>{weather?.visibility} km</Text>
+          <Text style={styles.humidityText}>{props.weather?.visibility} km</Text>
         </View>
       </View>
     </View>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { City } from '../data/stub';
+import { City, Weather } from '../data/stub';
 
 type CityListItemProps = {
-  item: City;
+  item: Weather;
 }
 
 export default function CityListItem(props: CityListItemProps) {
@@ -28,12 +28,12 @@ export default function CityListItem(props: CityListItemProps) {
     <View>
       <View style={styles.item}>
         <View style={styles.iconContainer}>
-          <Image source={getImagePath(item.name)} style={styles.icon} />
+          <Image source={getImagePath(item.city.name)} style={styles.icon} />
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.type}>{props.item.name}</Text>
-          <Text>{props.item.latitude} </Text>
-          <Text>{props.item.longitude} </Text>
+          <Text style={styles.type}>{props.item.city.name}</Text>
+          <Text>{props.item.city.latitude} </Text>
+          <Text>{props.item.city.longitude} </Text>
         </View>
       </View>
       <View style={styles.separator} />
