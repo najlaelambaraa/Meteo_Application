@@ -2,8 +2,6 @@ import React from 'react';
 import { View, FlatList, Image, Text, StyleSheet } from 'react-native';
 import CityListItem from '../Components/CityList';
 import MyList from '../Components/MyList';
-import Search from '../Components/Search';
-//import { Search } from '../Components/Search';
 import { City } from '../data/stub';
 
 
@@ -13,7 +11,7 @@ export default function HomeScreen() {
       <View style={styles.centered}>
       
       </View>
-      <Search/>
+      <Text>Search Bar !!!!!</Text>
       <MyList/>
     </View>
   )
