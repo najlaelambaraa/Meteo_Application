@@ -6,7 +6,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Details } from '../Components/Details';
 import { createStackNavigator } from '@react-navigation/stack';
-import CityDetails from '../Screen/CityDetails';
 export default function Navigation() {
     const BottomTabNavigator = createBottomTabNavigator();
     const Stack = createStackNavigator()
@@ -25,7 +24,8 @@ export default function Navigation() {
                                title: 'Favoris',
                                tabBarIcon: ({color}) => <TabBarIcon name="heart" color="red"/>,
                            }}/>
-                           <Stack.Screen name="Details"  component={CityDetails} 
+                                                  <Stack.Screen name="Details"  component={Details}
+                                                  
                            options={{
                             
                                title: 'Details',
