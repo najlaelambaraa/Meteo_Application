@@ -9,7 +9,7 @@ type CityProps = {
 
 export function Details(props: CityProps) {
   const weather: Weather = props.weather;
-  const city = City.name;
+  const city = weather.city;
 
   return (
     <View
@@ -40,7 +40,7 @@ export function Details(props: CityProps) {
       <View style={styles.supertruc}>
         <Image
           style={styles.petitImage}
-          source={require("../assets/icon.png")}
+          source={require("../assets/temperature.png")}
         />
         <View style={styles.supertrucencore}>
           <Text style={styles.temperature}>{weather?.temperature}°C</Text>
@@ -64,7 +64,7 @@ export function Details(props: CityProps) {
           <View style={styles.imageEtTexte}>
             <Image
               style={styles.imageHumidity}
-              source={require("../assets/icon.png")}
+              source={require("../assets/wind.png")}
             />
             <Text style={styles.text}>WIND SPEED</Text>
           </View>
@@ -76,7 +76,7 @@ export function Details(props: CityProps) {
           <View style={styles.imageEtTexte}>
             <Image
               style={styles.imageHumidity}
-              source={require("../assets/icon.png")}
+              source={require("../assets/pressure.png")}
             />
             <Text style={styles.text}>PRESSURE</Text>
           </View>
@@ -86,7 +86,7 @@ export function Details(props: CityProps) {
           <View style={styles.imageEtTexte}>
             <Image
               style={styles.imageHumidity}
-              source={require("../assets/icon.png")}
+              source={require("../assets/visibility.png")}
             />
             <Text style={styles.text}>VISIBILITY</Text>
           </View>
