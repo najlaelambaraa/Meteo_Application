@@ -12,7 +12,7 @@ export default function HomeScreen() {
       <View style={styles.centered}>
       
       </View>
-      
+      <Search/>
       <MyList/>
     </View>
   )
