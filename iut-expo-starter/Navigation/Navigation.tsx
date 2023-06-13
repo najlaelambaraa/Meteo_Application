@@ -4,18 +4,16 @@ import HomeScreen from "../Screen/HomeScreen";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
 import { createStackNavigator } from '@react-navigation/stack';
-
 import CityDetails from '../Screen/CityDetails';
+
 
  export default function Navigation() {
     const BottomTabNavigator = createBottomTabNavigator();
     const Stack = createStackNavigator()
     return (
         //@ts-ignore
-        <NavigationContainer>
-           
+        <NavigationContainer>           
             <BottomTabNavigator.Navigator initialRouteName="Home">
             <BottomTabNavigator.Screen name="Home" component={HomeScreen}
                            options={{
