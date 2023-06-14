@@ -6,7 +6,10 @@ type CityListItemProps = {
   item: Weather;
 }
 
-export default function CityListItem(props: CityListItemProps) {
+export default function CityListItem(props: CityListItemProps,{navigation}) {
+ 
+
+
     const { item } = props;
     const getImagePath = (name: string) => {
         switch (name) {
