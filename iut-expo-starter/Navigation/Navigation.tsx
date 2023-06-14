@@ -18,18 +18,19 @@ import CityDetails from '../Screen/CityDetails';
             <BottomTabNavigator.Screen name="Home" component={HomeScreen}
                            options={{
                                title: 'Home',
-                               tabBarIcon: ({color}) => <TabBarIcon name="home" color={color}/>,
+                               tabBarIcon: ({color}) => <TabBarIcon name="home" color={'black'}/>,
                            }}/>
                <BottomTabNavigator.Screen name="Favoris" component={FavorisScreen}
                            options={{
                                title: 'Favoris',
                                tabBarIcon: ({color}) => <TabBarIcon name="heart" color="red"/>,
                            }}/>
-                              <BottomTabNavigator.Screen name="CityDetail" component={CityDetails}
+                             <BottomTabNavigator.Screen name="CityDetail" component={CityDetails}
                            options={{
                                title: 'City',
-                               tabBarIcon: ({color}) => <TabBarIcon name="city" color={''}/>,
+                               tabBarIcon: ({color}) => <TabBarIcon name="list" color={'black'}/>,
                            }}/>
+
                            
             </BottomTabNavigator.Navigator>
         </NavigationContainer>
