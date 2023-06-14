@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { createStackNavigator } from '@react-navigation/stack';
 import CityDetails from '../Screen/CityDetails';
+import MyList from '../Screen/MyList';
 
 
  export default function Navigation() {
@@ -15,7 +16,7 @@ import CityDetails from '../Screen/CityDetails';
         //@ts-ignore
         <NavigationContainer>           
             <BottomTabNavigator.Navigator initialRouteName="Home">
-            <BottomTabNavigator.Screen name="Home" component={HomeScreen}
+            <BottomTabNavigator.Screen name="Home" component={MyList}
                            options={{
                                title: 'Home',
                                tabBarIcon: ({color}) => <TabBarIcon name="home" color={'black'}/>,
