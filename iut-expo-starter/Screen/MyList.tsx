@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, TouchableHighlight } from 'react-native';
 import { CITIES_DATA, City, WEATHER_DATA } from '../data/stub';
-import CityListItem from './CityList';
+import CityListItem from '../Components/CityList';
 
 
 const MyList = () => {

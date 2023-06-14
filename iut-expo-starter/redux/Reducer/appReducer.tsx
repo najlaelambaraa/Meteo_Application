@@ -6,14 +6,14 @@ const initialState = {
   
   export default appReducer = (state = initialState, action) => {
     switch (action.type) {
-      case ADD_FAVORITE_CITY:
+        case ADD_FAVORITE_CITY:
         // @ts-ignore
         state.favoriteCity.push(action.favoriteCity)
         return {...state};
-      case FETCH_CITY:
+        case FETCH_CITY:
         // @ts-ignore
         return {...state, city: action.payload};
-      case DELETE_CITY:
+        case DELETE_CITY:
         // @ts-ignore
         return {...state, city: [...state.city.filter((item) => item.name != action.payload.name)]}  
         case FETCH_FAVORITE_CITY:
