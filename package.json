@@ -1,0 +1,18 @@
+{
+  "name": "meteo_projet_react",
+  "version": "1.0.0",
+  "description": "This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "expo": "^48.0.19",
+    "react-redux": "^8.1.0",
+    "rect": "^1.2.1",
+    "typescript": "^4.9.4"
+  }
+}

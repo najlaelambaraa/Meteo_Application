@@ -4,12 +4,10 @@ import { City, Weather } from '../data/stub';
 
 type CityListItemProps = {
   item: Weather;
+  fav: City | null
 }
 
 export default function CityListItem(props: CityListItemProps,{navigation}) {
- 
-
-
     const { item } = props;
     const getImagePath = (name: string) => {
         switch (name) {

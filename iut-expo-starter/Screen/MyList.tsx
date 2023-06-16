@@ -13,8 +13,9 @@ export default function MyList({route,navigation}) {
     <View>
   <Search/>
   <View>
-    <FlatList data={WEATHER_DATA} renderItem={({item}) =>
+    <FlatList data={cityList} renderItem={({item}) =>
       <TouchableHighlight onPress={() => navigation.navigate("CityDetail", {"weather" : item})}>
+
         <CityListItem item={item}/>
       </TouchableHighlight>
       } keyExtractor={(item: City) => item.name}/>
