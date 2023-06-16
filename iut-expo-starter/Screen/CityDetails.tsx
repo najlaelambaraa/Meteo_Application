@@ -8,11 +8,8 @@ import { City, Weather } from "../data/stub";
 export default function CityDetails({route}){
     const insets = useSafeAreaInsets();
     const statusBarHeight = insets.top;
-
-    
-
     const weather: Weather = route.params.weather;
-console.log(weather)
+    console.log(weather)
     return (
         <View>
             
