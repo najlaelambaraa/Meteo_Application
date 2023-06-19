@@ -1,14 +1,15 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TouchableHighlight } from 'react-native';
-import { CITIES_DATA, City, WEATHER_DATA } from '../data/stub';
+import { CITIES_DATA, City, Weather, WEATHER_DATA } from '../data/stub';
 import CityListItem from '../Components/CityList';
 import {useDispatch, useSelector} from 'react-redux';
 import Search from '../Components/Search';
-import { GetListWeather } from '../redux/Action/GetList_Weater';
+import { GetListWeather } from '../redux/Action/GetListWeather';
+
 
 export default function MyList({route,navigation}) {
-  const cityList = useSelector(state => state.appReducer.city);
+  const weathersList = useSelector(state => state.appReducer.weathers);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,12 +23,12 @@ export default function MyList({route,navigation}) {
     <View>
   <Search/>
   <View>
-    <FlatList data={cityList} renderItem={({item}) =>
+    <FlatList data={weathersList} renderItem={({item}) =>
       <TouchableHighlight onPress={() => navigation.navigate("CityDetail", {"weather" : item})}>
 
-        <CityListItem item={item}/>
+        <CityListItem item={item.city} city={item.city}/>
       </TouchableHighlight>
-      } keyExtractor={(item: City) => item.name}/>
+      } keyExtractor={(item: Weather) => item.city.name}/>
       </View>
     </View>
     
