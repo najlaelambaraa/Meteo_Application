@@ -8,13 +8,11 @@ type CityProps = {
 };
 
 export function Details(props: CityProps) {
-   
-
   return (
     <View
       style={{
         alignItems: "center",
-        backgroundColor: "#B6D0E2",         
+        backgroundColor: "#B6D0E2",
         height: "100%",
         width: "100%",
       }}
@@ -48,7 +46,7 @@ export function Details(props: CityProps) {
           </Text>
         </View>
       </View>
-      <View style={styles.boxes}>
+      <View style={styles.box}>
         <View style={styles.leftBox}>
           <View style={styles.imageEtTexte}>
             <Image
@@ -59,7 +57,9 @@ export function Details(props: CityProps) {
           </View>
           <Text style={styles.humidityText}>{props.weather?.humidity}%</Text>
         </View>
-        <View style={styles.rightBox}>
+      </View>
+      <View style={styles.box}>
+        <View style={styles.leftBox}>
           <View style={styles.imageEtTexte}>
             <Image
               style={styles.imageHumidity}
@@ -70,7 +70,7 @@ export function Details(props: CityProps) {
           <Text style={styles.humidityText}>{props.weather?.windSpeed} km/h</Text>
         </View>
       </View>
-      <View style={styles.boxes}>
+      <View style={styles.box}>
         <View style={styles.leftBox}>
           <View style={styles.imageEtTexte}>
             <Image
@@ -81,7 +81,9 @@ export function Details(props: CityProps) {
           </View>
           <Text style={styles.humidityText}>{props.weather?.pressure} hPa</Text>
         </View>
-        <View style={styles.rightBox}>
+      </View>
+      <View style={styles.box}>
+        <View style={styles.leftBox}>
           <View style={styles.imageEtTexte}>
             <Image
               style={styles.imageHumidity}
@@ -153,20 +155,14 @@ const styles = StyleSheet.create({
     width: 20,
     marginLeft: 10,
   },
+  box: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginBottom: 10,
+  },
   leftBox: {
     alignSelf: "flex-start",
     margin: 25,
-    marginTop: 10,
-    marginBottom: 5,
-    height: 90,
-    width: 150,
-    flexDirection: "column",
-    backgroundColor: "powderblue",//carré
-    borderRadius: 20,
-  },
-  rightBox: {
-    alignSelf: "flex-start",
-    marginRight: 25,
     marginTop: 10,
     marginBottom: 5,
     height: 90,
@@ -191,8 +187,5 @@ const styles = StyleSheet.create({
   imageEtTexte: {
     flexDirection: "row",
     marginTop: 13,
-  },
-  boxes: {
-    flexDirection: "row",
   },
 });

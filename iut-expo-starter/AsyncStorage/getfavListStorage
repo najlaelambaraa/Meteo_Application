@@ -1,0 +1,22 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { City } from '../data/stub';
+import {FETCH_FAVORITE_CITY} from '../redux/constants';
+
+export const getFavoriteCityStorage = async () => {
+  try {
+    const cityJson = await AsyncStorage.getItem('favorite_city')
+    return cityJson != null ? JSON.parse(cityJson) : null;
+  } catch(e) {
+    console.log("An error occurred", e);
+  }
+
+
+//   const getFavoriteNounours = async () => {
+//     try {
+//       const jsonNounours = await AsyncStorage.getItem('favorite_nounours')
+//       return jsonNounours != null ? JSON.parse(jsonNounours) : null;
+//     } catch(e) {
+//       console.log("An error occurred", e);
+//     }
+//   }
+}
