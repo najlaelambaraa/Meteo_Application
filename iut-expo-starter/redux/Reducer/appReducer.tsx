@@ -2,7 +2,7 @@ import { ADD_FAVORITE_CITY, DELETE_CITY, FETCH_CITY, FETCH_FAVORITE_CITY, GET_WE
 const initialState = {
     city: [],
     favoriteCity: [],
-  }
+  }// et hna app actl
   
   export default appReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -13,9 +13,7 @@ const initialState = {
         case FETCH_CITY:
         // @ts-ignore
         return {...state, city: action.payload};
-        case DELETE_CITY:
-        // @ts-ignore
-        return {...state, city: [...state.city.filter((item) => item.name != action.payload.name)]}  
+  
         case FETCH_FAVORITE_CITY:
             // @ts-ignore
             return {...state, city: action.payload};

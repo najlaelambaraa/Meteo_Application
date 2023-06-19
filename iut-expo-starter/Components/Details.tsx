@@ -2,7 +2,7 @@ import React from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { View, Text, StyleSheet, TouchableHighlight, Image } from "react-native";
 import { City, Weather } from "../data/stub";
-
+//utls pour passeer les données d'un  composant pa a un fil
 type CityProps = {
   weather: Weather;
 };

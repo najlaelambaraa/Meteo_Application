@@ -1,0 +1,19 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+export const removeFavoriteCity = async () => {
+    try {
+      await AsyncStorage.removeItem('favorite_city')
+    } catch(e) {
+      console.log("An error occurred", e);
+    }
+  }
+
+
+
+//   const removeFavoriteNounours = async () => {
+//     try {
+//       await AsyncStorage.removeItem('favorite_nounours')
+//     } catch(e) {
+//       console.log("An error occurred", e);
+//     }
+//   }

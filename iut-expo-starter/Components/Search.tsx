@@ -7,7 +7,7 @@ const Search: React.FC = () => {
 
   const handleSearch = () => {
     if (searchText === '') {
-      // Affichez une erreur si aucun texte de recherche n'est saisi
+      //  erreur si aucun texte de recherche n'est saisi
       return;
     }
 
