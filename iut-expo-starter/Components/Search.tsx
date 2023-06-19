@@ -7,12 +7,11 @@ const Search: React.FC = () => {
 
   const handleSearch = () => {
     if (searchText === '') {
-      // Affichez une erreur si aucun texte de recherche n'est saisi
+
       return;
     }
 
-    // Effectuez votre recherche de ville en utilisant l'API appropriée
-    // Ici, nous affichons simplement le texte de recherche dans la console
+   
     console.log(`Recherche de la ville : ${searchText}`);
 
     setSearchText('');

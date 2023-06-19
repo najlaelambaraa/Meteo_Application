@@ -5,13 +5,14 @@ import { City, Weather } from "../data/stub";
 
 type CityProps = {
   weather: Weather;
+  
 };
 
 export function Details(props: CityProps) {
-   
-
+  
   return (
-    <View
+
+<View
       style={{
         alignItems: "center",
         backgroundColor: "#B6D0E2",         
@@ -93,6 +94,9 @@ export function Details(props: CityProps) {
         </View>
       </View>
     </View>
+
+
+ 
   );
 }
 
