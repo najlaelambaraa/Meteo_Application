@@ -13,6 +13,9 @@ async function changeFavoriteCity(city: City | null, already: boolean) {
   }
   dispatch(addFavoriteCity(city))
 }
+const handleButtonPress = () => {
+  
+};
 
 export function Details(props: CityProps) {
   
@@ -26,6 +29,18 @@ export function Details(props: CityProps) {
         width: "100%",
       }}
     >
+           <TouchableHighlight onPress={ handleButtonPress} 
+            style={{
+            backgroundColor: 'white',
+            padding: 5,
+            borderRadius: 5,
+            alignItems: 'center',
+            
+            }}>
+              
+               <Button title={"Add to favorite"} />
+              </TouchableHighlight>
+
       <Text style={styles.name}>{props.weather.city.name}</Text>
       <View style={styles.place}>
         <Text style={styles.petitText}>
@@ -58,9 +73,7 @@ export function Details(props: CityProps) {
             Ressenti {props.weather?.temperatureFeelsLike}°C
           </Text>
         </View>
-        {/* <TouchableHighlight onPress={() => changeFavoriteCity(props.weather.city, isFavorite)}>
-              <Image source={ isFavorite ? require('../assets/yellowstar.png') : require('../assets/yellowstar.png')} style={styles.button}/>
-            </TouchableHighlight> */}
+
       </View>
       <View style={styles.boxes}>
         <View style={styles.leftBox}>
