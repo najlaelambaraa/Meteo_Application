@@ -38,7 +38,7 @@ export function Details(props: CityProps) {
             
             }}>
               
-               <Button title={"Add to favorite"} />
+               <Button title={"Add favorite"} />
               </TouchableHighlight>
 
       <Text style={styles.name}>{props.weather.city.name}</Text>
