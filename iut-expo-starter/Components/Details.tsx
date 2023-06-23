@@ -1,12 +1,18 @@
 import React from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { View, Text, StyleSheet, TouchableHighlight, Image } from "react-native";
+import { View, Text, StyleSheet, TouchableHighlight, Image, Button } from "react-native";
 import { City, Weather } from "../data/stub";
 
 type CityProps = {
   weather: Weather;
   
 };
+async function changeFavoriteCity(city: City | null, already: boolean) {
+  if (already){
+    city = null
+  }
+  dispatch(addFavoriteCity(city))
+}
 
 export function Details(props: CityProps) {
   
@@ -42,12 +48,19 @@ export function Details(props: CityProps) {
           style={styles.petitImage}
           source={require("../assets/icon.png")}
         />
+        {/* <Button  onPress={} >
+
+        </Button> */}
+
         <View style={styles.supertrucencore}>
           <Text style={styles.temperature}>{props.weather?.temperature}°C</Text>
           <Text style={styles.petitTemp}>
             Ressenti {props.weather?.temperatureFeelsLike}°C
           </Text>
         </View>
+        {/* <TouchableHighlight onPress={() => changeFavoriteCity(props.weather.city, isFavorite)}>
+              <Image source={ isFavorite ? require('../assets/yellowstar.png') : require('../assets/yellowstar.png')} style={styles.button}/>
+            </TouchableHighlight> */}
       </View>
       <View style={styles.boxes}>
         <View style={styles.leftBox}>
