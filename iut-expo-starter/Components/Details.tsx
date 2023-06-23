@@ -57,10 +57,7 @@ export function Details(props: CityProps) {
           <Text style={styles.petitTemp}>
             Ressenti {props.weather?.temperatureFeelsLike}°C
           </Text>
-        </View>
-        {/* <TouchableHighlight onPress={() => changeFavoriteCity(props.weather.city, isFavorite)}>
-              <Image source={ isFavorite ? require('../assets/yellowstar.png') : require('../assets/yellowstar.png')} style={styles.button}/>
-            </TouchableHighlight> */}
+        </View>      
       </View>
       <View style={styles.boxes}>
         <View style={styles.leftBox}>
