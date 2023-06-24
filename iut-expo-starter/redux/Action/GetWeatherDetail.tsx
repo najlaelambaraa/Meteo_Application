@@ -12,9 +12,8 @@ export const GetWeatherDetail = (city : City) => {
             
             let weatherDetail: Weather[] = [];  
             const cityList = useSelector(state => state.appReducer.city);
-            dispatch(GetListWeather());
-            
-          
+            dispatch(GetListWeather());            
+         
           for (let index = 0; index < cityList.length; index++) {
         
          
@@ -34,10 +33,7 @@ export const GetWeatherDetail = (city : City) => {
               cityList[index]
               );
               weatherDetail.push(weatherData)
-            }
-             
-          
-
+            }                    
               dispatch (SetCityDetailAction(weatherDetail));
               console.log(weatherDetail)
 
