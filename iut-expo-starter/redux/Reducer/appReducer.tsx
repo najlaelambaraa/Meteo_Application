@@ -2,7 +2,8 @@ import { Weather } from "../../data/stub";
 import { ADD_FAVORITE_CITY, DELETE_CITY, FETCH_CITY, FETCH_FAVORITE_CITY, GET_LIST_WEATHER, GET_WEATHER_DETAIL, GET_WEATHER_LIST } from "../constants";
 const initialState = {
     city: [],
-    favoriteCity: [],
+    //favoriteCity: [],
+    favoriteCity: null,
     weather : null,
     weathers : [],
   }
@@ -10,6 +11,7 @@ const initialState = {
   export default appReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_FAVORITE_CITY:
+          return {...state, favoriteCity: state.favoriteCity};
         // @ts-ignore
         state.favoriteCity.push(action.favoriteCity)
         return {...state};
