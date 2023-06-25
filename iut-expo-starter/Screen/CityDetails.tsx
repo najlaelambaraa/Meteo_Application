@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
-import { Button, TouchableHighlight, View} from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import {View} from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import { storeFavoriteCity } from "../asyncStorange/storeFavoriteCity";
 import { Details } from "../Components/Details";
-import { City, Weather } from "../data/stub";
-import { addCityToFavoritesAction, addFavoriteCity } from "../redux/Action/addFavoriteCity";
+import { Weather } from "../data/stub";
+import { addCityToFavoritesAction} from "../redux/Action/FavorisAction";
 
 
 
@@ -13,7 +11,7 @@ export default function CityDetails({route}){
     
     const dispatch = useDispatch();
   const handleButtonPress = () => {
-    console.log("NAAAAAAAAAAA FAV")
+    
     dispatch(addCityToFavoritesAction(route.params.weather.city));
 };
 

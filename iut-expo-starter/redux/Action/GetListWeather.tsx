@@ -1,7 +1,5 @@
-
 import { City, Weather } from "../../data/stub";
-import { setListCity } from "./SetListCity";
-import { setListWeather } from "./SetWeatherDetail";
+import { setListWeather } from "./SetWeather";
 
 
 export const GetListWeather = () => {
@@ -34,8 +32,15 @@ export const GetListWeather = () => {
            }
            dispatch(setListWeather(weatherDetail));
       } catch (error) {
-        console.log('Error---------', error);
+        console.log(weatherfailler(error) );
     
       }
     }
   }
+
+  export const weatherfailler = (error : string) => ({
+    
+    type: WEATHER_ERROR,
+    payload: error,
+   
+  });

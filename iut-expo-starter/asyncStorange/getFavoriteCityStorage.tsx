@@ -1,5 +1,4 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useDispatch } from "react-redux";
 import { Weather } from "../data/stub";
 import { setFavoriteCity } from "../redux/Action/setFavoriteCity";
 

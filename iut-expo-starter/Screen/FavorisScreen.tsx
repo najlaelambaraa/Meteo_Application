@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { getFavoriteCityStorage } from '../asyncStorange/getFavoriteCityStorage';
-import { City, FAVORITE_CITY_DATA, Weather } from '../data/stub';
-import { fetchFavoriteCitiesSuccess, fetchFavoriteCitiesSuccessAction } from '../redux/Action/addFavoriteCity';
+import { City, Weather } from '../data/stub';
+import { fetchFavoriteCitiesSuccessAction } from '../redux/Action/FavorisAction';
 
 type CityFavProps = {
   item: City;

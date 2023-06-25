@@ -1,11 +1,12 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { City } from "../../data/stub";
-import { ADD_CITY_TO_FAVORITES_SUCCESS, ADD_FAVORIS, FETCH_FAVORITE_CITIES_SUCCESS } from "../constants"
+import { ADD_CITY_TO_FAVORITES_SUCCESS, FAVORITE_CITIES_ERROR, FETCH_FAVORITE_CITIES_SUCCESS } from "../constants"
 
-export const addFavoriteCity = weather => ({
+
+  export const favorisfailler = (error : string) => ({
     
-    type: ADD_FAVORIS,
-    payload: weather,
+    type: FAVORITE_CITIES_ERROR,
+    payload: error,
    
   });
   
@@ -34,7 +35,7 @@ export const fetchFavoriteCitiesSuccessAction = () => {
           console.log("fetchFavoriteCitiesSuccessAction - after forEach", citiesArray);
           dispatch(fetchFavoriteCitiesSuccess(citiesArray));
       } catch (error) {
-          console.log(error);
+          dispatch(favorisfailler(error))
       }
   }
 }
@@ -56,7 +57,7 @@ export const addCityToFavoritesAction = (city: City) => {
           const data = await AsyncStorage.multiGet(key);
           console.log("list de données ",data)
       } catch (error) {
-          console.log(error);
+          dispatch(favorisfailler(error))
       }
   }
 }

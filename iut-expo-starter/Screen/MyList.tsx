@@ -1,10 +1,9 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TouchableHighlight } from 'react-native';
-import { CITIES_DATA, City, Weather, WEATHER_DATA } from '../data/stub';
+import { Weather} from '../data/stub';
 import CityListItem from '../Components/CityList';
 import {useDispatch, useSelector} from 'react-redux';
-
 import { GetListWeather } from '../redux/Action/GetListWeather';
 import { SearchBar } from 'react-native-elements';
 

@@ -1,12 +1,9 @@
 import React from 'react';
 import FavorisScreen from "../Screen/FavorisScreen";
-import HomeScreen from "../Screen/HomeScreen";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { createStackNavigator } from '@react-navigation/stack';
-import CityDetails from '../Screen/CityDetails';
-import MyList from '../Screen/MyList';
 import CityNavigator from './StackNavigation';
 
 

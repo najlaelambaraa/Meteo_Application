@@ -1,9 +1,7 @@
 import React from "react";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { View, Text, StyleSheet, TouchableHighlight, Image, Button } from "react-native";
 import { City, Weather } from "../data/stub";
-import { storeFavoriteCity } from "../asyncStorange/storeFavoriteCity";
-import { useDispatch } from "react-redux";
+
 
 type CityProps = {
   weather: Weather;
@@ -24,14 +22,7 @@ export function Details(props: CityProps) {
     >
         
           <Button title={"Add to favorite"} onPress={props.handleButtonPress}/>
-
-      <Text style={styles.name}>{props.weather.city.name}</Text>
-      <View style={styles.place}>
-        <Text style={styles.petitText}>
-          {props.weather.city.longitude} - {props.weather.city.latitude}
-        </Text>
-      </View>
-      <TouchableHighlight>
+          <TouchableHighlight>
         <Image
           style={styles.image}
           source={
@@ -41,11 +32,16 @@ export function Details(props: CityProps) {
           }
         />
       </TouchableHighlight>
+      <Text style={styles.name}>{props.weather.city.name}</Text>
+      <View style={styles.place}>
+        
+      </View>
+      
       <Text style={styles.weatherType}>{props.weather?.weatherType}</Text>
       <View style={styles.supertruc}>
         <Image
           style={styles.petitImage}
-          source={require("../assets/icon.png")}
+          source={require("../assets/Nuageux.png")}
         />
         {/* <Button  onPress={} >
 
@@ -57,9 +53,6 @@ export function Details(props: CityProps) {
             Ressenti {props.weather?.temperatureFeelsLike}°C
           </Text>
         </View>
-        {/* <TouchableHighlight onPress={() => changeFavoriteCity(props.weather.city, isFavorite)}>
-              <Image source={ isFavorite ? require('../assets/yellowstar.png') : require('../assets/yellowstar.png')} style={styles.button}/>
-            </TouchableHighlight> */}
       </View>
       <View style={styles.boxes}>
         <View style={styles.leftBox}>
@@ -76,7 +69,7 @@ export function Details(props: CityProps) {
           <View style={styles.imageEtTexte}>
             <Image
               style={styles.imageHumidity}
-              source={require("../assets/icon.png")}
+              source={require("../assets/storm.png")}
             />
             <Text style={styles.text}>WIND SPEED</Text>
           </View>
@@ -88,7 +81,7 @@ export function Details(props: CityProps) {
           <View style={styles.imageEtTexte}>
             <Image
               style={styles.imageHumidity}
-              source={require("../assets/icon.png")}
+              source={require("../assets/gauge.png")}
             />
             <Text style={styles.text}>PRESSURE</Text>
           </View>
@@ -98,7 +91,7 @@ export function Details(props: CityProps) {
           <View style={styles.imageEtTexte}>
             <Image
               style={styles.imageHumidity}
-              source={require("../assets/icon.png")}
+              source={require("../assets/view.png")}
             />
             <Text style={styles.text}>VISIBILITY</Text>
           </View>
