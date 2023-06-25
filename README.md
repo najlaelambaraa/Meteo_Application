@@ -19,7 +19,7 @@ Il y a une  page contenant la liste des villes de l'API. L'utilisateur peut  rec
 
 ## Notation
 Pour la partie application features, nous avons tout A PART LES TESTS UNITAIRES QUI SONT Pas finis completement. Nous avons fait tout ce qui était requis dans la partie basics. 
- :white_check_mark: Navigation (3 pts)
+* :white_check_mark: Navigation (3 pts)
   Magasin Redux (10 points)
 * :white_check_mark: Lire les données du magasin redux (2 pts)
  * :white_check_mark: Mettre à jour les données dans le magasin redux avec des actions et des réducteurs (tranche = 0) (4 pts)
