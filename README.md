@@ -1,5 +1,5 @@
 
-Notre application  permet de connaître la météo des grandes villes de France. Elle utilise l'API : https://iut-weather-api.azurewebsites.net/swagger-ui/#/Cities/get_cities.
+Notre application  permet de connaître la météo des grandes villes de France. Elle utilise l'API :                      https://iut-weather-api.azurewebsites.net/swagger-ui/#/Cities/get_cities.
 
 Cette application permet aussi d'ajouter une ville en favorite pour accéder à sa météo plus facilement.
 
