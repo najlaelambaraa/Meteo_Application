@@ -1,41 +1,26 @@
-# Website
+# LaSuperMeteo 
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+![React Native](https://img.shields.io/badge/reactnative-3DDC84?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%237F52FF.svg?style=for-the-badge&logo=typescript&logoColor=white) 
 
-### Installation
+La Super Météo est une application qui vous permet de connaître la météo des grandes villes de France. Elle utilise l'API : https://iut-weather-api.azurewebsites.net/swagger-ui/#/Cities/get_cities
 
-```
-$ yarn
-```
+Cette application permet aussi d'ajouter une ville en favorite pour accéder à sa météo plus facilement.
 
-### Local Development
+## Description
+Il y a une  page contenant la liste des villes de l'API. L'utilisateur peut  rechercher une ville en utilisant la barre de recherche. Si l'utilisateur clique sur un des composants de la ville alors les détails de cette ville s'afficheront et  un boutton favoris pour choisir si la ville est favori ou pas , puis les villes favoris sont tous afficher dans une liste dans la page de favoris.
 
-```
-$ yarn start
-```
+## Sketchs
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-### Build
+<div align = center>
+<img alt="home_page_sketch" src="documentation/HomeScreen.png" width="200" >
+<img alt="city_list_sketch" src="documentation/ListScreen.png" width="200" >
+</div>
 
-```
-$ yarn build
-```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
 
-Using SSH:
+## Notation
 
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Pour la partie application features, nous avons tout A PART LES TESTS UNITAIRES QUI SONT Pas finis completement. Nous avons fait tout ce qui était requis dans la partie basics. 
