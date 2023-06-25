@@ -3,10 +3,11 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { View, Text, StyleSheet, TouchableHighlight, Image, Button } from "react-native";
 import { City, Weather } from "../data/stub";
 import { storeFavoriteCity } from "../asyncStorange/storeFavoriteCity";
+import { useDispatch } from "react-redux";
 
 type CityProps = {
   weather: Weather;
-  
+  handleButtonPress : any;
 };
 
 export function Details(props: CityProps) {
@@ -21,10 +22,8 @@ export function Details(props: CityProps) {
         width: "100%",
       }}
     >
-        <TouchableHighlight onPress={props.handleButtonPress}>
-        <Button title={"Add to favorite"} />
-          </TouchableHighlight>
-          
+        
+          <Button title={"Add to favorite"} onPress={props.handleButtonPress}/>
 
       <Text style={styles.name}>{props.weather.city.name}</Text>
       <View style={styles.place}>

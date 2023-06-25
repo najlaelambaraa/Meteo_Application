@@ -9,20 +9,19 @@ import { City, Weather } from "../data/stub";
 
 
 export default function CityDetails({route}){
+    
     const dispatch = useDispatch();
+  const handleButtonPress = () => {
+    console.log("NAAAAAAAAAAA FAV")
+    dispatch(storeFavoriteCity(route.params.weather));
+};
 
- 
-   const handleButtonPress = () => {
-        dispatch(storeFavoriteCity(route.params.weather));
-    };
+    
+  const weather : Weather = route.params.weather;
  
     return (
         <View>           
-            <Details weather={route.params.weather} handleButtonPress={handleButtonPress}  />
-            <View>
-                
-          
-            </View>
+            <Details weather={weather} handleButtonPress={handleButtonPress}  />
            
         </View>
     )

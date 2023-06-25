@@ -3,15 +3,20 @@ import { setFavoriteCity } from "../redux/Action/setFavoriteCity";
 import { getFavoriteCityStorage } from "./getFavoriteCityStorage";
 
 export const storeFavoriteCity = (favoris) => {
+  console.log("ici return")
   return async (dispatch, getState) => {
+    console.log("ici j'entre")
     try {
     
       const {favoris} = getState().appReducer;
+      console.log("ici json")
         dispatch(getFavoriteCityStorage())
      
-  
+        
         const updatedFavorites = [...favoris, favoris ];
+       
           await storeFavoriteToJSON(updatedFavorites);
+          
         dispatch(setFavoriteCity(updatedFavorites));
     
     } catch (e) {
