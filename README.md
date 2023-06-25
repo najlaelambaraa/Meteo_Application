@@ -3,16 +3,6 @@ Notre application est conçue pour fournir les informations météorologiques de
 
 L'application commence par une page présentant la liste des villes disponibles dans l'API. Les utilisateurs ont la possibilité de rechercher une ville en utilisant la barre de recherche. Lorsqu'un utilisateur clique sur l'une des villes de la liste, les détails météorologiques de cette ville s'affichent, accompagnés d'un bouton favori permettant de choisir si la ville doit être ajoutée aux favoris. Les villes marquées comme favoris sont ensuite affichées dans une liste dédiée sur la page des favoris.
 
-## Les Sketchs
-Accueil                 |   Page Detail      |  Page Favoris                
-:-------------------------:|:-------------------------:|:-------------------------:
-<img src="./Documentation/images/detail.png" width=200/>  |<img src="./Documentation/images/favoris.png" width=200/> | <img src="./Documentation/images/home.png" width=200/>
-
-## Les Captures d'écrans
-Accueil                 |   Page Detail      |  Page Favoris                
-:-------------------------:|:-------------------------:|:-------------------------:
-<img size=200 src="Documentation/images/home.png" />   |<img size=200 src="Documentation/images/detail.png" />  | <img size=200 src="Documentation/images/favoris.png" />
-
 ### Installation
 
 ```
@@ -24,6 +14,18 @@ $ npm install
 ```
 $ npx expo start
 ```
+
+
+## Les Sketchs
+Accueil                 |   Page Detail      |  Page Favoris                
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="./Documentation/images/detail.png" width=200/>  |<img src="./Documentation/images/favoris.png" width=200/> | <img src="./Documentation/images/home.png" width=200/>
+
+## Les Captures d'écrans
+Accueil                 |   Page Detail      |  Page Favoris                
+:-------------------------:|:-------------------------:|:-------------------------:
+<img width=200 src="Documentation/images/home.png" />   |<img width=200 src="Documentation/images/detail.png" />  | <img width=200 src="Documentation/images/favoris.png" />
+
 
 ## Liste de Notation
 
