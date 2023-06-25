@@ -9,25 +9,25 @@ L'application commence par une page présentant la liste des villes disponibles 
 $ npm install
 ```
 
-### Démarrage le serveur de développemen
+### Démarrage le serveur de développement
 
 ```
 $ npx expo start
 ```
 
 
-## Les Sketchs
+## Les Sketchs :
 Accueil                 |   Page Detail      |  Page Favoris                
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="./Documentation/images/detail.png" width=200/>  |<img src="./Documentation/images/favoris.png" width=200/> | <img src="./Documentation/images/home.png" width=200/>
 
-## Les Captures d'écrans
+## Les Captures d'écrans :
 Accueil                 |   Page Detail      |  Page Favoris                
 :-------------------------:|:-------------------------:|:-------------------------:
-<img width=200 src="Documentation/images/home.png" />   |<img width=200 src="Documentation/images/detail.png" />  | <img width=200 src="Documentation/images/favoris.png" />
+<img width=200 src="Documentation/images/listapp.png" />   |<img width=200 src="Documentation/images/detailapp.png" />  | <img width=200 src="Documentation/images/favorisapp.png" />
 
 
-## Liste de Notation
+## Liste de Notation :
 
 * :white_check_mark: Application sketches (4 pts)
   
