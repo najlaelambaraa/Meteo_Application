@@ -1,8 +1,9 @@
-import { describe, expect, it } from '@jest/globals';
-import { ExclusiveGesture } from 'react-native-gesture-handler/lib/typescript/handlers/gestures/gestureComposition';
 import { City, FAVORITE_CITY_DATA, WEATHER_DATA } from '../data/stub';
 import { setFavoriteCity } from '../redux/Action/setFavoriteCity';
 import { setWeather } from '../redux/Action/setWeather';
+import { describe, expect, it } from '@jest/globals';
+
+
 
 
 describe("Actions tests", () => {
@@ -21,3 +22,6 @@ describe("Actions tests", () => {
         expect(setWeather(WEATHER_DATA)).toEqual(expectation);
     })
 })
+
+
+
