@@ -34,11 +34,10 @@ Pour la partie application features, nous avons tout A PART LES TESTS UNITAIRES 
  Attention à la gestion du clavier 
 * :white_check_mark: Store (2 pts)
   ##Fonctionnalités de l'application (14 points)
-
     * :white_check_mark:  Récupérer des données à l'aide de l'API Web (6 pts)
      * :white_check_mark:    Gérer le rappel de réussite de la récupération (3 pts)
       * :white_check_mark:   Gérer le rappel d'erreur de récupération (3 pts) 
-    * :white_check_mark: Stocker les données préférées dans la mémoire du téléphone (2 pts)
+    * :x: Stocker les données préférées dans la mémoire du téléphone (2 pts)
    * :white_check_mark:  Écrire des tests (6 points)
      * :white_check_mark:    charge utile de toutes les actions (1 pts)
      * :white_check_mark:    tous les cas de réducteurs (2 pts)
