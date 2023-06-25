@@ -16,7 +16,6 @@ Il y a une  page contenant la liste des villes de l'API. L'utilisateur peut  rec
 
 
 ## Notation
-
 * :white_check_mark: Navigation (3 pts)
   Magasin Redux (10 points)
 * :white_check_mark: Lire les données du magasin redux (2 pts)
