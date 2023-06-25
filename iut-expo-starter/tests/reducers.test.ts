@@ -15,7 +15,7 @@ describe('test reducer', () => {
     })
 
     it('should handle favorite city', () => {
-        expect(appReducer(initialState, {type : 'FETCH_FAVORITE_CITY', FAVORITE_CITY_DATA})).toEqual({weatherList : [], favoriteCity : FAVORITE_CITY_DATA})
+        expect(appReducer(initialState, {type : 'SET_FAVORITE_CITY', FAVORITE_CITY_DATA})).toEqual({weatherList : [], favoriteCity : FAVORITE_CITY_DATA})
     })
 
     it('should handle weather', () => {

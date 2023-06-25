@@ -1,11 +1,31 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { City } from "../data/stub";
+import { setFavoriteCity } from "../redux/Action/setFavoriteCity";
+import { getFavoriteCityStorage } from "./getFavoriteCityStorage";
 
-export const storeFavoriteCity = async (city: City | null) => {
+export const storeFavoriteCity = (favoris) => {
+  return async (dispatch, getState) => {
     try {
-      const cityJson = JSON.stringify(city)
-      await AsyncStorage.setItem('favorite_city', cityJson);
+    
+      const {favoris} = getState().appReducer;
+        dispatch(getFavoriteCityStorage())
+     
+  
+        const updatedFavorites = [...favoris, favoris ];
+          await storeFavoriteToJSON(updatedFavorites);
+        dispatch(setFavoriteCity(updatedFavorites));
+    
     } catch (e) {
       console.log("An error occurred", e);
     }
+  };
+};
+
+const storeFavoriteToJSON = async (weathers) =>{
+  try {
+    const weatherJson = JSON.stringify(weathers)
+    await AsyncStorage.setItem('favorite_city', weatherJson);
+    
+  } catch (error) {
+    console.log("An error occurred", error);
+  }
 }

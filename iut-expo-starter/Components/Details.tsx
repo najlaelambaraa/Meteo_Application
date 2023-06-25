@@ -2,23 +2,15 @@ import React from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { View, Text, StyleSheet, TouchableHighlight, Image, Button } from "react-native";
 import { City, Weather } from "../data/stub";
+import { storeFavoriteCity } from "../asyncStorange/storeFavoriteCity";
 
 type CityProps = {
   weather: Weather;
   
 };
-async function changeFavoriteCity(city: City | null, already: boolean) {
-  if (already){
-    city = null
-  }
-  dispatch(addFavoriteCity(city))
-}
-const handleButtonPress = () => {
-  
-};
 
 export function Details(props: CityProps) {
-  
+ 
   return (
 
 <View
@@ -29,17 +21,10 @@ export function Details(props: CityProps) {
         width: "100%",
       }}
     >
-           <TouchableHighlight onPress={ handleButtonPress} 
-            style={{
-            backgroundColor: 'white',
-            padding: 5,
-            borderRadius: 5,
-            alignItems: 'center',
-            
-            }}>
-              
-               <Button title={"Add to favorite"} />
-              </TouchableHighlight>
+        <TouchableHighlight onPress={props.handleButtonPress}>
+        <Button title={"Add to favorite"} />
+          </TouchableHighlight>
+          
 
       <Text style={styles.name}>{props.weather.city.name}</Text>
       <View style={styles.place}>

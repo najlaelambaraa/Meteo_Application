@@ -1,9 +1,8 @@
-import { City } from '../../data/stub';
-import {ADD_FAVORITE_CITY, FETCH_FAVORITE_CITY} from '../constants';
+import {SET_FAVORITE_CITY} from '../constants';
 
-export const setFavoriteCity = (city: City | null) => {
+export const setFavoriteCity = favoris=> {
   return {
-    type: FETCH_FAVORITE_CITY,
-    payload: city,
+    type: SET_FAVORITE_CITY,
+    payload: favoris,
   };
 }

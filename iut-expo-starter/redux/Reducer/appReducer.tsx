@@ -1,36 +1,29 @@
-import { Weather } from "../../data/stub";
-import { ADD_FAVORITE_CITY, DELETE_CITY, FETCH_CITY, FETCH_FAVORITE_CITY, GET_LIST_WEATHER, GET_WEATHER_DETAIL, GET_WEATHER_LIST } from "../constants";
+import {FETCH_CITY, SET_FAVORITE_CITY, GET_LIST_WEATHER, GET_WEATHER_DETAIL,ADD_FAVORIS } from "../constants";
 const initialState = {
     city: [],
-    //favoriteCity: [],
-    favoriteCity: null,
     weather : null,
     weathers : [],
+    favoris : [],
   }
   
   export default appReducer = (state = initialState, action) => {
+
     switch (action.type) {
-        case ADD_FAVORITE_CITY:
-          return {...state, favoriteCity: state.favoriteCity};
-        // @ts-ignore
-        state.favoriteCity.push(action.favoriteCity)
-        return {...state};
+       
         case FETCH_CITY:
-        // @ts-ignore
-        return {...state, city: action.payload};
+          return {...state, city: action.payload};
         case GET_LIST_WEATHER:
-        // @ts-ignore
-        return {...state, weathers: action.payload};
-        case DELETE_CITY:
-        // @ts-ignore
-        return {...state, city: [...state.city.filter((item) => item.name != action.payload.name)]}  
-        case FETCH_FAVORITE_CITY:
-            // @ts-ignore
-            return {...state, city: action.payload};
+          return {...state, weathers: action.payload};
+
+        case ADD_FAVORIS:
+            return {  ...state,favoris: [...state.favoris, action.payload],};
+
+        case SET_FAVORITE_CITY:
+            return {...state, favoris: action.payload};
 
          case GET_WEATHER_DETAIL:
-        // @ts-ignore
-          return { ...state, weather: action.payload};
+            return { ...state, weather: action.payload};
+
         default:
         return state;
     }

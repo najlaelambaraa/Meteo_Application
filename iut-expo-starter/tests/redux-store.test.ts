@@ -8,7 +8,7 @@ import { setWeather } from '../redux/Action/setWeather';
 describe("Actions tests", () => {
     it('should create an action with FETCH_FAVORITE_CITY type', () => {
         const expectation = {
-            type : 'FETCH_FAVORITE_CITY',
+            type : 'SET_FAVORITE_CITY',
             payload : FAVORITE_CITY_DATA
         }
         expect(setFavoriteCity(FAVORITE_CITY_DATA)).toEqual(expectation);
