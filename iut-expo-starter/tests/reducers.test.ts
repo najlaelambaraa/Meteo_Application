@@ -1,7 +1,7 @@
+
 import { describe, expect, it } from "@jest/globals";
 import { FAVORITE_CITY_DATA, WEATHER_DATA } from "../data/stub";
 import appReducer from "../redux/Reducer/appReducer";
-
 
 describe('test reducer', () => {
     let initialState = {
@@ -22,3 +22,5 @@ describe('test reducer', () => {
         expect(appReducer(initialState, {type : 'FETCH_WEATHER', WEATHER_DATA})).toEqual({weatherList : [WEATHER_DATA], favoriteCity : null})
     })
 })
+
+
