@@ -1,9 +1,5 @@
 
-
-![React Native](https://img.shields.io/badge/reactnative-3DDC84?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%237F52FF.svg?style=for-the-badge&logo=typescript&logoColor=white) 
-
-La Super Météo est une application qui vous permet de connaître la météo des grandes villes de France. Elle utilise l'API : https://iut-weather-api.azurewebsites.net/swagger-ui/#/Cities/get_cities
+Notre application  permet de connaître la météo des grandes villes de France. Elle utilise l'API : https://iut-weather-api.azurewebsites.net/swagger-ui/#/Cities/get_cities.
 
 Cette application permet aussi d'ajouter une ville en favorite pour accéder à sa météo plus facilement.
 
