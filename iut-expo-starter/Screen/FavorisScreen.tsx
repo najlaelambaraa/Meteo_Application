@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFavoriteCityStorage } from '../asyncStorange/getFavoriteCityStorage';
 import { City, FAVORITE_CITY_DATA, Weather } from '../data/stub';
+import { fetchFavoriteCitiesSuccess, fetchFavoriteCitiesSuccessAction } from '../redux/Action/addFavoriteCity';
 
 type CityFavProps = {
   item: City;
@@ -13,17 +14,17 @@ const CityFavoriteItem = (props: CityFavProps) => {
 
   return (
     <View style={styles.favoriteItem}>
-      <Text style={styles.cityName}>{item.name}</Text>
+      <Text style={styles.cityName}>{item._name}</Text>
       <View style={styles.coordinatesContainer}>
         <View style={styles.coordinateItem}>
           <Text style={styles.coordinateLabel}>Latitude</Text>
-          <Text style={styles.coordinateValue}>{item.latitude}</Text>
+          <Text style={styles.coordinateValue}>{item._latitude}</Text>
         </View>
         <View style={styles.coordinateItem}>
           <Text style={styles.coordinateLabel}>Longitude</Text>
-          <Text style={styles.coordinateValue}>{item.longitude}</Text>
+          <Text style={styles.coordinateValue}>{item._longitude}</Text>
         </View>
-      </View>
+  </View>
     </View>
   );
 };
@@ -35,7 +36,7 @@ const CityFavoriteItem = (props: CityFavProps) => {
   useEffect(() => {
     const loadWeathers = async () => {
       
-        dispatch(getFavoriteCityStorage());
+        dispatch(fetchFavoriteCitiesSuccessAction());
        console.log("le total est : "+ favorites[0]["_city"]["_name"])
     };
     loadWeathers();

@@ -1,4 +1,4 @@
-import {FETCH_CITY, SET_FAVORITE_CITY, GET_LIST_WEATHER, GET_WEATHER_DETAIL,ADD_FAVORIS } from "../constants";
+import {FETCH_CITY, SET_FAVORITE_CITY, GET_LIST_WEATHER, GET_WEATHER_DETAIL,ADD_FAVORIS, ADD_CITY_TO_FAVORITES_SUCCESS, FETCH_FAVORITE_CITIES_SUCCESS } from "../constants";
 const initialState = {
     city: [],
     weather : null,
@@ -23,7 +23,12 @@ const initialState = {
 
          case GET_WEATHER_DETAIL:
             return { ...state, weather: action.payload};
+          
+          case ADD_CITY_TO_FAVORITES_SUCCESS :
+            return { ...state, favoris:[...state.favoris,action.payload]}
 
+          case FETCH_FAVORITE_CITIES_SUCCESS:
+          return { ...state, favoris: action.payload}
         default:
         return state;
     }

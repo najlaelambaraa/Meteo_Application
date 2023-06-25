@@ -11,10 +11,10 @@ export default function CityNavigator() {
     const Stack = createStackNavigator();
     return (
     
-        <Stack.Navigator initialRouteName="CityDetails">
+        <Stack.Navigator initialRouteName="ListCity">
      
-        <Stack.Screen name="CityDetails" component={CityDetails}/>
-        <Stack.Screen name="ListCity" component={MyList}/>
+        <Stack.Screen name="CityDetail" component={CityDetails}/>
+        <Stack.Screen name="ListCity" options={{title : "Meteo City"} } component={MyList}/>
       
       </Stack.Navigator>
         

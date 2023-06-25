@@ -7,6 +7,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { createStackNavigator } from '@react-navigation/stack';
 import CityDetails from '../Screen/CityDetails';
 import MyList from '../Screen/MyList';
+import CityNavigator from './StackNavigation';
 
 
  export default function Navigation() {
@@ -16,21 +17,19 @@ import MyList from '../Screen/MyList';
         //@ts-ignore
         <NavigationContainer>           
             <BottomTabNavigator.Navigator initialRouteName="Home">
-            <BottomTabNavigator.Screen name="Home" component={MyList}
+            <BottomTabNavigator.Screen name="Home" component={CityNavigator}
                            options={{
                                title: 'Home',
+                               headerShown : false,
                                tabBarIcon: ({color}) => <TabBarIcon name="home" color={'black'}/>,
                            }}/>
                <BottomTabNavigator.Screen name="Favoris" component={FavorisScreen}
                            options={{
                                title: 'Favoris',
+                               
                                tabBarIcon: ({color}) => <TabBarIcon name="heart" color="red"/>,
                            }}/>
-                             <BottomTabNavigator.Screen name="CityDetail" component={CityDetails}
-                           options={{
-                               title: 'City',
-                               tabBarIcon: ({color}) => <TabBarIcon name="list" color={'black'}/>,
-                           }}/>
+                            
 
                            
             </BottomTabNavigator.Navigator>

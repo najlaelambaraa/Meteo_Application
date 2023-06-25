@@ -45,7 +45,7 @@ export default function MyList({route,navigation}) {
     data={weathersList.filter((item: { city: { name: string; }; }) => item.city.name.toLowerCase().includes(search.toLowerCase()))}
      renderItem={({item}) =>
     
-      <TouchableHighlight onPress={() => navigation.navigate("CityDetail", {"weather" : item})}>
+      <TouchableHighlight onPress={() => navigation.push("CityDetail", {"weather" : item})}>
 
         <CityListItem item={item.city} city={item.city}/>
       </TouchableHighlight>

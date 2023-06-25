@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Weather } from "../data/stub";
 import { setFavoriteCity } from "../redux/Action/setFavoriteCity";
 
-export const getFavoriteCityStorage = async () => {
+export const getFavoriteCityStorage =  () => {
   return async(
     dispatch 
   )=> {
@@ -11,6 +11,7 @@ export const getFavoriteCityStorage = async () => {
       console.log("try")
       
       const cityJson = await AsyncStorage.getItem('favorite_city')
+      console.log(cityJson)
       const data : [Weather] = cityJson != null ? JSON.parse(cityJson) : [];
      console.log(data)
       dispatch(setFavoriteCity(data));

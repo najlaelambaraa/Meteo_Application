@@ -12,9 +12,9 @@ export const storeFavoriteCity = (favoris) => {
       console.log("ici json")
         dispatch(getFavoriteCityStorage())
      
-        
+        console.log(favoris)
         const updatedFavorites = [...favoris, favoris ];
-       
+       console.log(updatedFavorites)
           await storeFavoriteToJSON(updatedFavorites);
           
         dispatch(setFavoriteCity(updatedFavorites));

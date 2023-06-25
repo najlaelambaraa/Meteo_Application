@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { storeFavoriteCity } from "../asyncStorange/storeFavoriteCity";
 import { Details } from "../Components/Details";
 import { City, Weather } from "../data/stub";
+import { addCityToFavoritesAction, addFavoriteCity } from "../redux/Action/addFavoriteCity";
 
 
 
@@ -13,7 +14,7 @@ export default function CityDetails({route}){
     const dispatch = useDispatch();
   const handleButtonPress = () => {
     console.log("NAAAAAAAAAAA FAV")
-    dispatch(storeFavoriteCity(route.params.weather));
+    dispatch(addCityToFavoritesAction(route.params.weather.city));
 };
 
     

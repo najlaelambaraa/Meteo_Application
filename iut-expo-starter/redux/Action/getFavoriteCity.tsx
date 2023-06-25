@@ -5,6 +5,7 @@ import { setFavoriteCity } from "./setFavoriteCity";
 import { setWeather } from "./setWeather";
 
 export const getFavoriteCity = () => {
+  console.log("get fav")
     return async dispatch => {
       try {
             const json = await getFavoriteCityStorage()
