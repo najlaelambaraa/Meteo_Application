@@ -33,7 +33,7 @@ Accueil                 |   Page Detail      |  Page Favoris
   
 * :white_check_mark: A Readme describing your project/application. (2 pts)
 * :white_check_mark: Navigation (3 pts)
-* :white_check_mark: Read data from redux store (2 pts
+* :white_check_mark: Read data from redux store (2 pts)
 * :white_check_mark: Update data to redux store using redux-thunk (API AND|OR AsyncStorage) (4 pts)
 * :white_check_mark: Display list of items (2 pts)
 * :white_check_mark: Display dynamic image (2 pts)
