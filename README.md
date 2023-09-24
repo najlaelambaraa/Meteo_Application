@@ -29,21 +29,21 @@ Accueil                 |   Page Detail      |  Page Favoris
 
 ## Liste de Notation :
 
-* :white_check_mark: Application sketches (4 pts)
+* :white_check_mark: Application sketches 
   
-* :white_check_mark: A Readme describing your project/application. (2 pts)
-* :white_check_mark: Navigation (3 pts)
-* :white_check_mark: Read data from redux store (2 pts)
-* :white_check_mark: Update data to redux store using redux-thunk (API AND|OR AsyncStorage) (4 pts)
-* :white_check_mark: Display list of items (2 pts)
-* :white_check_mark: Display dynamic image (2 pts)
+* :white_check_mark: A Readme describing your project/application. 
+* :white_check_mark: Navigation 
+* :white_check_mark: Read data from redux store 
+* :white_check_mark: Update data to redux store using redux-thunk (API AND|OR AsyncStorage) 
+* :white_check_mark: Display list of items 
+* :white_check_mark: Display dynamic image 
  
-* :white_check_mark: Binding child component props (1 pts)
+* :white_check_mark: Binding child component props 
 
-* :white_check_mark:  Handle a TextInput correctly (2 pts)
-* :white_check_mark:  Handle fetch success callback (3 pts)
-* :white_check_mark:  Handle fetch error callback (3 pts 
-* :white_check_mark:  Store favorite data into phone storage (2 pts)
+* :white_check_mark:  Handle a TextInput correctly 
+* :white_check_mark:  Handle fetch success callback 
+* :white_check_mark:  Handle fetch error callback 
+* :white_check_mark:  Store favorite data into phone storage 
 
 
 ## Author : 
